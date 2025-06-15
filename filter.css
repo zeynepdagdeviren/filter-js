@@ -1,64 +1,112 @@
-.container {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
     display: flex;
     padding: 50px;
-}
-
-.leftMenu {
+    gap: 50px;
+  }
+  
+  .leftMenu {
     flex: 1;
-}
-
-
-.search {
+  }
+  
+  .search {
     border: 1px solid gray;
     width: 200px;
     padding: 10px;
-}
-
-h1 {
-    font-size: 50px;
-    color: #555;
-    font-weight: 300;
-}
-
-.cats {
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0 10px;
+  }
+  
+  .cats {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-}
-
-.cat {
+    margin-bottom: 30px;
+  }
+  
+  .cat {
     cursor: pointer;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 400;
     padding: 5px;
-}
-
-.content {
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .cat:hover,
+  .cat.active {
+    border: 1px solid #999;
+    background-color: #eee;
+  }
+  
+  .price {
+    margin-top: 10px;
+  }
+  
+  .priceRange {
+    width: 200px;
+    margin-top: 10px;
+  }
+  
+  .priceValue {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  
+  .content {
     flex: 4;
-}
-
-.products{
+  }
+  
+  .products {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-}
-
-.product {
-    width: 350px;
+    gap: 30px;
+  }
+  
+  .product {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
     align-items: center;
-}
-
-img {
-    width: 150px;
-    height: 250px;
-    object-fit: contain;
-}
-
-.name {
-    font-weight: 300;
-}
+    gap: 15px;
+    transition: transform 0.3s;
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+  }
+  
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .name {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .priceText {
+    color: green;
+    font-size: 18px;
+  }
+  
 
